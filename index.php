@@ -8,7 +8,7 @@ $app = new \Slim\Slim();
 });*/
 
 $app->get('/',function() use ($app){
-    $values = array('$wish'=>'Hello','$name'=>'Manasa');
+    $values = array('wish'=>'Hello','name'=>'Manasa');
 
 $app->response()->header("Content-type":"application/json");
 $json_response=json_encode($values);

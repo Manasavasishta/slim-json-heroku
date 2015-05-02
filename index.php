@@ -11,7 +11,7 @@ $app->get('/',function() use ($app){
     $values = ['$wish'=>'Hello','$name'=>'Manasa'];
 });
 $app->$response->headers->set('Content-type':application/json;charset=utf-8');
-$json_response=json_encode($values);
+$json_response=json_encode(print_r($values));
 echo $json_response;
 
 $app->run();

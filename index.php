@@ -8,11 +8,11 @@ $app = new \Slim\Slim();
 });*/
 
 $app->get('/',function() use ($app){
-    $values = ['$wish'=>'Hello','$name'=>'Manasa'];
-});
-$app->$response->headers->set('Content-type':application/json;charset=utf-8');
-$json_response=json_encode(print_r($values));
-echo $json_response;
+    $values = array('$wish'=>'Hello','$name'=>'Manasa');
 
+$app->response()->header("Content-type":"application/json");
+$json_response=json_encode($values);
+echo $json_response;
+});
 $app->run();
 ?>

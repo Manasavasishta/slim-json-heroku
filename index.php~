@@ -15,7 +15,7 @@ $app->get('/',function() use ($app){
 //echo $json_response;
 $app->response()->headers->set('Content-Type','application-json');
 $app->response()->setBody(json_encode($values));
-$app->response()->finalize();
+$app->response->finalize();
 exit();
 });
 $app->run();
